@@ -1,7 +1,6 @@
 package com.example.loginscreen;
 
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import java.util.Random;
@@ -11,8 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class SecondActivity extends AppCompatActivity {
-
+public class SecondActivity extends AppCompatActivity
+{
     private TextView Info;
     private int Counter = 0;
     private Button Submit;
@@ -21,7 +20,8 @@ public class SecondActivity extends AppCompatActivity {
     private TextView ShowAnswer;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
@@ -61,14 +61,15 @@ public class SecondActivity extends AppCompatActivity {
         Info.setText("Number of Incorrect Answers: " + String.valueOf(Counter));
         MathProblem.setText(rand_int1 + " + " + rand_int2);
 
-        Submit.setOnClickListener(new View.OnClickListener() {
+        Submit.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 if(Answer.getText().toString().isEmpty())
                     alert.show();
                 else
                     validate(Answer.getText().toString(), randAnswer);
-
             }
         });
     }
