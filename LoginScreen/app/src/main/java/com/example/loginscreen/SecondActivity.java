@@ -1,5 +1,8 @@
 package com.example.loginscreen;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import java.util.Random;
 import android.os.Bundle;
@@ -33,14 +36,39 @@ public class SecondActivity extends AppCompatActivity {
         Submit = (Button) findViewById(R.id.btnSubmit);
         Info = (TextView) findViewById(R.id.incorrectAttempts);
 
-        ShowAnswer.setText("Answer: " + randAnswer);
+        final AlertDialog.Builder NoAnswer = new AlertDialog.Builder(SecondActivity.this);
+        NoAnswer.setMessage("Please enter an answer.")
+                .setCancelable(false)
+                .setPositiveButton("Okay", new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which)
+                    {
+                        dialog.cancel();
+                    }
+                })
+                .setNegativeButton("Commit Die", new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which)
+                    {
+                        finish();
+                    }
+                });
+        final AlertDialog alert = NoAnswer.create();
+        //alert.show();
+        //ShowAnswer.setText("Answer: " + randAnswer);
         Info.setText("Number of Incorrect Answers: " + String.valueOf(Counter));
         MathProblem.setText(rand_int1 + " + " + rand_int2);
 
         Submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                validate(Answer.getText().toString(), randAnswer);
+                if(Answer.getText().toString().isEmpty())
+                    alert.show();
+                else
+                    validate(Answer.getText().toString(), randAnswer);
+
             }
         });
     }
@@ -57,6 +85,7 @@ public class SecondActivity extends AppCompatActivity {
             if (Counter == 2) {
                 Info.setText("You suck at math");
                 Submit.setEnabled(false);
+                ShowAnswer.setText("The correct answer was: " + randAnswer);
             }
         }
     }
