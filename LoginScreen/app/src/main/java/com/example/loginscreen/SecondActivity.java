@@ -12,12 +12,10 @@ import android.widget.TextView;
 
 public class SecondActivity extends AppCompatActivity
 {
-    private TextView Info;
+    private TextView Info, MathProblem, ShowAnswer;
     private int Counter = 0;
     private Button Submit;
-    private TextView MathProblem;
     private EditText Answer;
-    private TextView ShowAnswer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
