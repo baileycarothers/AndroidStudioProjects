@@ -73,16 +73,19 @@ public class SecondActivity extends AppCompatActivity {
         });
     }
 
-    private void validate(String userAnswer, int randAnswer) {
+    private void validate(String userAnswer, int randAnswer)
+    {
         int userNum = Integer.parseInt(userAnswer);
         if (userNum == randAnswer)
         {
             Info.setText("Congrats you can do math!");
         }
-        else {
+        else
+        {
             Counter++;
             Info.setText("Number of Incorrect Answers: " + String.valueOf(Counter));
-            if (Counter == 2) {
+            if (Counter == 2)
+            {
                 Info.setText("You suck at math");
                 Submit.setEnabled(false);
                 ShowAnswer.setText("The correct answer was: " + randAnswer);

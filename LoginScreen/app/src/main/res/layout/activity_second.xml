@@ -15,15 +15,16 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="56dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="@string/answer"
+        android:gravity="center"
+        android:hint="Answer"
         android:inputType="textPersonName"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/btnSubmit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.486"
-        app:layout_constraintStart_toStartOf="parent"
-        android:gravity="center"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnSubmit"
