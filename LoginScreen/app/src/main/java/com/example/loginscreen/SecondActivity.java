@@ -54,8 +54,6 @@ public class SecondActivity extends AppCompatActivity
                     }
                 });
         final AlertDialog alert = NoAnswer.create();
-        //alert.show();
-        //ShowAnswer.setText("Answer: " + randAnswer);
         Info.setText("Number of Incorrect Answers: " + String.valueOf(Counter));
         MathProblem.setText(rand_int1 + " + " + rand_int2);
 
