@@ -2,6 +2,7 @@ package com.example.loginscreen;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import java.util.Random;
 import android.os.Bundle;
@@ -51,6 +52,8 @@ public class SecondActivity extends AppCompatActivity
                     public void onClick(DialogInterface dialog, int which)
                     {
                         finish();
+                        Intent intent=new Intent(SecondActivity.this, AppMenu.class);
+                        startActivity(intent);
                     }
                 });
         final AlertDialog alert = NoAnswer.create();
