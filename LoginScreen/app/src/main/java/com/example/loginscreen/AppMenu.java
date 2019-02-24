@@ -8,7 +8,7 @@ import android.os.Bundle;
 
 public class AppMenu extends AppCompatActivity {
 
-    private Button Math, Login;
+    private Button Math, Login, Clicker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +17,7 @@ public class AppMenu extends AppCompatActivity {
 
         Login = (Button)findViewById(R.id.loginButton);
         Math = (Button) findViewById(R.id.mathButton);
+        Clicker = (Button) findViewById(R.id.clickerButton);
 
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,6 +31,13 @@ public class AppMenu extends AppCompatActivity {
             public void onClick(View v) {
                 Intent math = new Intent(AppMenu.this, SecondActivity.class);
                 startActivity(math);
+            }
+        });
+        Clicker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent clicker = new Intent(AppMenu.this, ClickerGame.class);
+                startActivity(clicker);
             }
         });
     }
