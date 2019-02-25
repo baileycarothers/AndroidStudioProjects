@@ -1,0 +1,13 @@
+Activities:
+[X] Menu Screen
+[ ] Continue Solving Math Buttons
+[ ] Alternate Logins
+[ ] Correct Answer Activity
+[ ] Incorrect Answer Behavior
+
+Login Flow:
+Login->Menu->Math Problems->New Problem->Menu->Exit App
+
+Incremental Game:
+[ ] More upgrades
+[ ] Hide total funds into sub menu

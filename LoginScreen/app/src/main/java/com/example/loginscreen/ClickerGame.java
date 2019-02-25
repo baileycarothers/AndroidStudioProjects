@@ -57,8 +57,10 @@ public class ClickerGame extends AppCompatActivity {
                         //bdTotal = bdTotal.setScale(0, RoundingMode.HALF_UP);
                         //totalFunds = bdTotal.doubleValue();
                         tvFunds = (TextView) findViewById(R.id.tvFunds);
-                        tvFunds.setText("Funds: " + String.valueOf(currentFunds));
-                        tvTotalFunds.setText(("Total Funds Generated: " + String.valueOf(totalFunds)));
+                        int dCF = (int) currentFunds;
+                        tvFunds.setText("Funds: " + dCF);
+                        int dTF = (int) totalFunds;
+                        tvTotalFunds.setText(("Total Funds Generated: " + dTF));
                     }
                 });
             }
@@ -72,7 +74,9 @@ public class ClickerGame extends AppCompatActivity {
                     UpgradeAutoClicker.setEnabled(false);
                     currentFunds = currentFunds - autoClickerUpgrade;
                     autoClicker = autoClicker + 1;
-                    autoClickerUpgrade = autoClickerUpgrade * 2;
+                    autoClickerUpgrade = autoClickerUpgrade * 2.5;
+                    int dACU = (int) autoClickerUpgrade;
+                    UpgradeAutoClicker.setText(String.format("Upgrade Autoclicker: $" + dACU));
                     /*
                     timer.schedule(new TimerTask() {
                         @Override
@@ -95,8 +99,10 @@ public class ClickerGame extends AppCompatActivity {
             public void onClick(View v) {
                 currentFunds = currentFunds + clickValue;
                 totalFunds = totalFunds + clickValue;
-                tvFunds.setText("Funds: " + String.valueOf(currentFunds));
-                tvTotalFunds.setText(("Total Funds Generated: " + String.valueOf(totalFunds)));
+                int dCF = (int) currentFunds;
+                tvFunds.setText("Funds: " + String.valueOf(dCF));
+                int dTF = (int) totalFunds;
+                tvTotalFunds.setText(("Total Funds Generated: " + String.valueOf(dTF)));
             }
         });
 
@@ -107,9 +113,14 @@ public class ClickerGame extends AppCompatActivity {
                 {
                     UpgradeButton.setEnabled(false);
                     currentFunds = currentFunds - upgradeCost;
-                    upgradeCost = upgradeCost * 2.5;
+                    upgradeCost = upgradeCost * 2;
                     clickValue = clickValue + 1;
-                    tvFunds.setText("Funds: " + String.valueOf(currentFunds));
+                    int dCF = (int) currentFunds;
+                    tvFunds.setText("Funds: " + dCF);
+                    int dCV = (int) clickValue;
+                    Generate.setText("Generate $" + dCV);
+                    int dUC = (int) upgradeCost;
+                    UpgradeButton.setText("Upgrade Generator: $" + dUC);
                 }
             }
         });
