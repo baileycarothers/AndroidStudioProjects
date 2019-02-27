@@ -1,5 +1,6 @@
 Activities:
 [X] Menu Screen
+[X] Incremental Game
 [ ] Alternate Logins
 
 Incremental Game:
@@ -7,6 +8,7 @@ Incremental Game:
 [ ] More upgrades
 [ ] Hide total funds into sub menu
 [ ] Show current level of upgrades
+[ ] Save progress
 
 Math Problem:
 [X] Continue Solving Math Buttons
