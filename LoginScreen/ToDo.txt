@@ -1,13 +1,23 @@
 Activities:
 [X] Menu Screen
-[ ] Continue Solving Math Buttons
 [ ] Alternate Logins
-[ ] Correct Answer Activity
-[ ] Incorrect Answer Behavior
-
-Login Flow:
-Login->Menu->Math Problems->New Problem->Menu->Exit App
 
 Incremental Game:
+[ ] Better naming conventions/theme
 [ ] More upgrades
 [ ] Hide total funds into sub menu
+[ ] Show current level of upgrades
+
+Math Problem:
+[X] Continue Solving Math Buttons
+[ ] Don't restart activity to generate new problem
+[ ] Random number generator into function
+[ ] Incorrect Answer Behavior
+[ ] Don't allow user to resubmit til answer changes
+
+Unity:
+[ ] Learn 2D menu
+[ ] Decide what assets to use
+[ ] Figure out how much C# is needed
+[ ] 2D Incremental to learn basics
+[ ] 3D Roguelike tutorial to learn AI programming
