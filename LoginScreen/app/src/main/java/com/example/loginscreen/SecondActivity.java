@@ -80,8 +80,13 @@ public class SecondActivity extends AppCompatActivity
         {
             Info.setText("Congrats you can do math!");
             Submit.setText("Generate New Problem");
-            Intent intent=new Intent(SecondActivity.this, SecondActivity.class);
-            startActivity(intent);
+            Submit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent=new Intent(SecondActivity.this, SecondActivity.class);
+                    startActivity(intent);
+                }
+            });
         }
         else
         {
